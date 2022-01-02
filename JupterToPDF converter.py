@@ -15,7 +15,7 @@ from tkinter import filedialog
 WKHTMLTOPDF_PATH = 'D:\\Softwares\\wkhtmltopdf\\bin\\wkhtmltopdf'  # or wherever you keep it
 
 def export_to_html(filename):
-    cmd = 'jupyter nbconvert --to html "{0}"'
+    cmd = 'ipython nbconvert --to html "{0}"'
     subprocess.call(cmd.format(filename), shell=True)
     return filename.replace(".ipynb", ".html")
 
